@@ -13,10 +13,10 @@ Halaman ketiga tampilan setelah add data
 
 <img src="https://github.com/Phooooo/EHealthApp/blob/main/3.PNG">
 
-Halaman keempat
+Halaman keempat untuk update dan delete
 
 <img src="https://github.com/Phooooo/EHealthApp/blob/main/4.PNG">
 
-Halaman kelima
+Halaman kelima tampilan setelah update data, data berubah
 
 <img src="https://github.com/Phooooo/EHealthApp/blob/main/5.PNG">
