@@ -9,7 +9,7 @@ Halaman kedua untuk add store (isi data), jika kosong tidak tidak bisa di save
 
 <img src="https://github.com/Phooooo/EHealthApp/blob/main/2.PNG">
 
-Halaman ketiga
+Halaman ketiga tampilan setelah add data
 
 <img src="https://github.com/Phooooo/EHealthApp/blob/main/3.PNG">
 
