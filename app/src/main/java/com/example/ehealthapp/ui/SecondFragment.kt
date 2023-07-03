@@ -55,11 +55,24 @@ class SecondFragment : Fragment() {
         val address = binding.addresseditText.text
         val phonenumber = binding.phonenumberEditText.text
         binding.saveButton.setOnClickListener {
-            val health = Health(0,name.toString(), address.toString(), phonenumber.toString())
-            healthViewModel.insert(health)
+        //update data tidak boleh kosong
+            if (name.isEmpty()) {
+                Toast.makeText(context,"Nama Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            } else if (address.isEmpty()) {
+                Toast.makeText(context,"Alamat Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            } else if (phonenumber.isEmpty()){
+                Toast.makeText(context,"Nomor Telepon Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            } else {
+                if (health == null) {
+                    val health = Health(0,name.toString(), address.toString(), phonenumber.toString())
+                    healthViewModel.insert(health)
+                } else {
+                    val health = Health(health?.id!!, name.toString(), address.toString(), phonenumber.toString())
+                    healthViewModel.update(health)
+                }
             findNavController().popBackStack()// untuk dismiss halaman ini
         }
-
+        }
         binding.deleteButton.setOnClickListener{
             health?.let { healthViewModel.delete(it) }
             findNavController().popBackStack()
